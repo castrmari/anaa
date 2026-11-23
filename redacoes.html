@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Portfólio de redações da Ana Lívia — 15 textos no modelo do ENEM produzidos em 2026.">
+  <title>Ana Lívia | Portfólio de Redações</title>
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/tema.js"></script>
+</head>
+<body>
+
+  <header class="topo">
+    <nav class="nav container">
+      <a href="index.html" class="logo">🎓 <span>Ana Lívia</span></a>
+      <button type="button" class="menu-btn" id="menuBtn" aria-label="Abrir menu" aria-expanded="false">☰</button>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Jornada Escolar</a></li>
+        <li><a href="redacoes.html" class="pagina-atual">Redações</a></li>
+      </ul>
+      <button type="button" class="tema-btn" id="temaBtn" aria-label="Alternar tema claro/escuro">🌙</button>
+    </nav>
+    <div class="barra-progresso" id="barraProgresso"></div>
+  </header>
+
+  <main>
+    <section class="hero hero-redacoes">
+      <div class="container">
+        <p class="etiqueta">Língua Portuguesa e Redação · 2026</p>
+        <h1>Portfólio de <span class="destaque">Redações</span></h1>
+        <p>Os 15 textos dissertativo-argumentativos que escrevi no 3º ano, no modelo do ENEM. Pesquise, filtre por eixo temático e clique em um card para ler.</p>
+      </div>
+    </section>
+
+    <section class="secao secao-alt" id="redacoes">
+      <div class="container">
+        <div class="ferramentas">
+          <label class="busca">
+            <span class="sr-only">Pesquisar redação</span>
+            <input type="search" id="busca" placeholder="🔍 Pesquisar por título, tema ou repertório...">
+          </label>
+          <div class="filtros-redacao" id="filtrosRedacao" role="group" aria-label="Filtrar por eixo temático">
+            <button type="button" class="chip ativo" data-eixo="todos">Todas</button>
+            <button type="button" class="chip" data-eixo="sociedade">👥 Sociedade</button>
+            <button type="button" class="chip" data-eixo="ambiente">🌎 Meio ambiente</button>
+            <button type="button" class="chip" data-eixo="tecnologia">💻 Tecnologia</button>
+            <button type="button" class="chip" data-eixo="saude">💪 Saúde</button>
+            <button type="button" class="chip" data-eixo="cultura">🏛️ Cultura</button>
+          </div>
+        </div>
+        <p class="contagem" id="contagem"></p>
+
+        <div class="grade-redacoes" id="gradeRedacoes">
+          <!-- Cards gerados pelo JavaScript a partir de js/redacoes.js -->
+          <noscript><p class="sem-resultado">Ative o JavaScript do navegador para ver as redações.</p></noscript>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="rodape">
+    <p>Feito com HTML, CSS e JavaScript por Ana Lívia · Programação Web · 2026</p>
+  </footer>
+
+  <button type="button" class="voltar-topo" id="voltarTopo" aria-label="Voltar ao topo">↑</button>
+
+  <!-- Modal de leitura -->
+  <div class="modal" id="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitulo" hidden>
+    <div class="modal-fundo" data-fechar></div>
+    <article class="modal-caixa">
+      <header class="modal-topo">
+        <div>
+          <p class="modal-meta" id="modalMeta"></p>
+          <h3 id="modalTitulo">Redação</h3>
+          <p class="modal-tema" id="modalTema"></p>
+        </div>
+        <button type="button" class="modal-fechar" data-fechar aria-label="Fechar">✕</button>
+      </header>
+      <div class="modal-ferramentas">
+        <button type="button" id="fonteMenos" aria-label="Diminuir fonte">A−</button>
+        <button type="button" id="fonteMais" aria-label="Aumentar fonte">A+</button>
+        <label class="marcar"><input type="checkbox" id="destacarRep"> Destacar estrutura</label>
+        <span id="modalInfo"></span>
+      </div>
+      <div class="modal-texto" id="modalTexto"></div>
+      <footer class="modal-nav">
+        <button type="button" class="btn btn-secundario" id="anterior">← Anterior</button>
+        <span id="modalPosicao"></span>
+        <button type="button" class="btn btn-secundario" id="proxima">Próxima →</button>
+      </footer>
+    </article>
+  </div>
+
+  <script src="js/redacoes.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Ana Lívia — minha jornada escolar, da pré-escola à formatura no Morelli.">
+  <title>Ana Lívia | Minha Jornada Escolar</title>
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/tema.js"></script>
+</head>
+<body>
+
+  <!-- ===== CABEÇALHO / MENU ===== -->
+  <header class="topo">
+    <nav class="nav container">
+      <a href="index.html" class="logo">🎓 <span>Ana Lívia</span></a>
+      <button type="button" class="menu-btn" id="menuBtn" aria-label="Abrir menu" aria-expanded="false">☰</button>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html" class="pagina-atual">Jornada Escolar</a></li>
+        <li><a href="redacoes.html">Redações</a></li>
+      </ul>
+      <button type="button" class="tema-btn" id="temaBtn" aria-label="Alternar tema claro/escuro">🌙</button>
+    </nav>
+    <div class="barra-progresso" id="barraProgresso"></div>
+  </header>
+
+  <main>
+    <!-- ===== APRESENTAÇÃO ===== -->
+    <section class="hero" id="inicio">
+      <div class="container hero-grid">
+        <div class="hero-texto">
+          <p class="etiqueta">Formanda 2026 · Ensino Médio</p>
+          <h1>Oi, eu sou a <span class="destaque">Ana Lívia</span></h1>
+          <p class="digitando" id="digitando" aria-live="polite"></p>
+          <p>Nasci em Jaguariaíva, no interior do Paraná, e passei por cinco escolas e duas cidades até chegar aqui. Neste site eu conto os treze anos que vivi na escola, das primeiras aulas em Jaguariaíva até a formatura no Morelli, em Curitiba.</p>
+          <div class="hero-botoes">
+            <a href="#linha-do-tempo" class="btn btn-primario">Começar a jornada</a>
+            <a href="redacoes.html" class="btn btn-secundario">Ler minhas redações</a>
+          </div>
+          <ul class="contadores">
+            <li><strong data-contar="13">0</strong><span>anos de escola</span></li>
+            <li><strong data-contar="5">0</strong><span>escolas</span></li>
+            <li><strong data-contar="2">0</strong><span>cidades</span></li>
+            <li><strong data-contar="15">0</strong><span>redações</span></li>
+          </ul>
+        </div>
+        <figure class="hero-foto">
+          <img src="assets/img/perfil.svg" alt="Foto da Ana Lívia" class="foto-ampliavel">
+        </figure>
+      </div>
+    </section>
+
+    <!-- ===== LINHA DO TEMPO ===== -->
+    <section class="secao" id="linha-do-tempo">
+      <div class="container">
+        <header class="secao-cabecalho">
+          <p class="etiqueta">Linha do tempo</p>
+          <h2>Minha Jornada Escolar</h2>
+          <p>Clique nas fotos para ampliar e em “Ver mais” para ler os causos e os desafios de cada fase.</p>
+        </header>
+
+        <div class="filtros-tempo" role="group" aria-label="Filtrar fases">
+          <button type="button" class="chip ativo" data-fase="todas">Todas</button>
+          <button type="button" class="chip" data-fase="infantil">Educação Infantil</button>
+          <button type="button" class="chip" data-fase="fundamental">Fundamental</button>
+          <button type="button" class="chip" data-fase="medio">Ensino Médio</button>
+        </div>
+
+        <ol class="linha-tempo">
+          <!-- 1. Jaguariaíva -->
+          <li class="evento revelar" data-fase="infantil">
+            <span class="evento-ano">2012 – 2014</span>
+            <article class="evento-card">
+              <img src="assets/img/01-jaguariaiva.svg" alt="Jardim de infância e pré-escola em Jaguariaíva" class="foto-ampliavel">
+              <div class="evento-corpo">
+                <h3>Jardim de Infância e Pré-escola</h3>
+                <p class="escola">📍 Jaguariaíva – PR</p>
+                <p>Foi na cidade onde nasci que entrei numa sala de aula pela primeira vez. Era tudo novo: a mochila maior que as costas, a lancheira, a fila para lavar as mãos. Eu queria ver tudo ao mesmo tempo, e cada dia parecia uma pequena aventura.</p>
+                <button type="button" class="ver-mais" aria-expanded="false">Ver mais ▾</button>
+                <div class="detalhes">
+                  <p><span class="tag tag-desafio">🏔️ Desafio</span> Aprender a ficar longe da mãe a tarde inteira.</p>
+                </div>
+              </div>
+            </article>
+          </li>
+
+          <!-- 2. Inovação do Saber -->
+          <li class="evento revelar" data-fase="fundamental">
+            <span class="evento-ano">2015 · 1º ano</span>
+            <article class="evento-card">
+              <img src="assets/img/02-inovacao-do-saber.svg" alt="1º ano na Escola Inovação do Saber" class="foto-ampliavel">
+              <div class="evento-corpo">
+                <h3>Mudança para Curitiba</h3>
+                <p class="escola">🏫 Escola Inovação do Saber · Curitiba</p>
+                <p>O 1º ano veio junto com uma mudança enorme: trocamos Jaguariaíva por Curitiba. Cidade grande, escola nova, colegas que eu nunca tinha visto. Foi na Inovação do Saber que aprendi a ler de verdade, juntando as letras até as palavras fazerem sentido.</p>
+                <button type="button" class="ver-mais" aria-expanded="false">Ver mais ▾</button>
+                <div class="detalhes">
+                  <p><span class="tag tag-desafio">🏔️ Desafio</span> Me adaptar a uma cidade e a uma escola completamente diferentes aos seis anos.</p>
+                </div>
+              </div>
+            </article>
+          </li>
+
+          <!-- 3. Novo Éden -->
+          <li class="evento revelar" data-fase="fundamental">
+            <span class="evento-ano">2016 · 2º ano</span>
+            <article class="evento-card">
+              <img src="assets/img/03-novo-eden.svg" alt="2º ano na Escola Novo Éden" class="foto-ampliavel">
+              <div class="evento-corpo">
+                <h3>Mais um recomeço</h3>
+                <p class="escola">🏫 Escola Novo Éden · Curitiba</p>
+                <p>No ano seguinte, mais uma escola. Mudar de novo não foi fácil, mas foi no Novo Éden que eu percebi que conseguia fazer amigos rápido quando precisava.</p>
+                <button type="button" class="ver-mais" aria-expanded="false">Ver mais ▾</button>
+                <div class="detalhes">
+                  <p><span class="tag tag-desafio">🏔️ Desafio</span> Começar do zero pela segunda vez seguida.</p>
+                </div>
+              </div>
+            </article>
+          </li>
+
+          <!-- 4. Natália de Conto Costa -->
+          <li class="evento revelar" data-fase="fundamental">
+            <span class="evento-ano">2017 – 2019 · 3º ao 5º ano</span>
+            <article class="evento-card">
+              <img src="assets/img/04-natalia-de-conto-costa.svg" alt="3º ao 5º ano na Escola Natália de Conto Costa" class="foto-ampliavel">
+              <div class="evento-corpo">
+                <h3>Finalmente, raízes</h3>
+                <p class="escola">🏫 Escola Natália de Conto Costa · Curitiba</p>
+                <p>Na Natália de Conto Costa finalmente fiquei mais tempo no mesmo lugar. Foram três anos de tabuada, feiras de ciências, festas juninas e as primeiras amizades que duraram. Depois de duas mudanças seguidas, foi a primeira escola em que fiquei mais de um ano, e ali eu finalmente me senti em casa.</p>
+                <button type="button" class="ver-mais" aria-expanded="false">Ver mais ▾</button>
+                <div class="detalhes">
+                  <p><span class="tag tag-desafio">🏔️ Desafio</span> Decorar a tabuada do 7, que parecia impossível.</p>
+                </div>
+              </div>
+            </article>
+          </li>
+
+          <!-- 5. Morelli Fundamental -->
+          <li class="evento revelar" data-fase="fundamental">
+            <span class="evento-ano">2020 – 2023 · 6º ao 9º ano</span>
+            <article class="evento-card">
+              <img src="assets/img/05-morelli-fundamental.svg" alt="6º ao 9º ano no Morelli" class="foto-ampliavel">
+              <div class="evento-corpo">
+                <h3>Morelli</h3>
+                <p class="escola">🏫 Morelli · Curitiba</p>
+                <p>Cheguei ao Morelli no 6º ano, e o ano mal tinha começado quando a pandemia fechou as escolas. Em 2020 e 2021 as aulas foram on-line: câmera desligada, microfone mudo e a sala de aula virando a mesa da cozinha. Aprendi a me organizar sozinha e a correr atrás do conteúdo quando a internet caía. As aulas presenciais só voltaram no fim de 2021, e foi estranho conhecer pessoalmente colegas com quem eu já estudava havia quase dois anos. Foi também no Morelli que, pela primeira vez, fiquei na mesma turma que a minha irmã gêmea.</p>
+                <button type="button" class="ver-mais" aria-expanded="false">Ver mais ▾</button>
+                <div class="detalhes">
+                  <p><span class="tag tag-desafio">🏔️ Desafio</span> Manter a concentração estudando em casa, longe dos amigos.</p>
+                </div>
+              </div>
+            </article>
+          </li>
+
+          <!-- 6. 1º EM -->
+          <li class="evento evento-favorito revelar" data-fase="medio">
+            <span class="evento-ano">2024 · 1º ano EM</span>
+            <article class="evento-card">
+              <span class="selo-favorito">⭐ Um dos melhores anos</span>
+              <img src="assets/img/06-morelli-1em.svg" alt="1º ano do Ensino Médio no Morelli" class="foto-ampliavel">
+              <div class="evento-corpo">
+                <h3>1º ano do Ensino Médio</h3>
+                <p class="escola">🏫 Morelli · Curitiba</p>
+                <p>Um dos meus anos favoritos. Depois da pandemia e do fim do Fundamental, tudo parecia recomeçar: matérias novas, mais liberdade e uma turma muito unida. Foi a primeira vez, que a escola voltou a parecer escola de verdade, cheia de gente, barulho e planos.</p>
+                <button type="button" class="ver-mais" aria-expanded="false">Ver mais ▾</button>
+                <div class="detalhes">
+                  <p><span class="tag tag-desafio">🏔️ Desafio</span> Dar conta de um ritmo de estudos bem mais puxado.</p>
+                </div>
+              </div>
+            </article>
+          </li>
+
+          <!-- 7. 2º EM -->
+          <li class="evento revelar" data-fase="medio">
+            <span class="evento-ano">2025 · 2º ano EM</span>
+            <article class="evento-card">
+              <img src="assets/img/07-morelli-2em.svg" alt="2º ano do Ensino Médio no Morelli" class="foto-ampliavel">
+              <div class="evento-corpo">
+                <h3>2º ano do Ensino Médio</h3>
+                <p class="escola">🏫 Morelli · Curitiba</p>
+                <p>O 2º ano foi de trabalho: mais provas, mais conteúdo e as primeiras conversas sérias sobre faculdade e profissão.</p>
+                <button type="button" class="ver-mais" aria-expanded="false">Ver mais ▾</button>
+                <div class="detalhes">
+                  <p><span class="tag tag-desafio">🏔️ Desafio</span> Equilibrar estudos, descanso e vida social.</p>
+                </div>
+              </div>
+            </article>
+          </li>
+
+          <!-- 8. 3º EM -->
+          <li class="evento evento-favorito revelar" data-fase="medio">
+            <span class="evento-ano">2026 · 3º ano EM</span>
+            <article class="evento-card">
+              <span class="selo-favorito">⭐ Um dos melhores anos</span>
+              <img src="assets/img/08-morelli-3em.svg" alt="3º ano do Ensino Médio e formatura" class="foto-ampliavel">
+              <div class="evento-corpo">
+                <h3>3º ano e a formatura 🎉</h3>
+                <p class="escola">🏫 Morelli · Curitiba</p>
+                <p>O último ano foi, junto com o 1º, o melhor de todos. Teve ENEM, vestibulares e a formatura, mas teve, principalmente, a sensação de aproveitar cada dia e de perceber o quanto eu cresci desde aquela menina que passou por todas essas transformações.</p>
+                <button type="button" class="ver-mais" aria-expanded="false">Ver mais ▾</button>
+                <div class="detalhes">
+                  <p><span class="tag tag-desafio">🏔️ Desafio</span> A pressão do ENEM e as despedidas.</p>
+                </div>
+              </div>
+            </article>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ===== RECADO FINAL ===== -->
+    <section class="secao secao-alt" id="recado">
+      <div class="container recado">
+        <p class="etiqueta">Recado final</p>
+        <h2>Obrigada!</h2>
+        <p>À minha família e à minha irmã, por cada mudança de cidade e de escola enfrentada junto comigo; aos professores de todas as escolas por onde passei; e aos amigos que fizeram esses treze anos valerem a pena. Agora começa o próximo capítulo.</p>
+        <div class="hero-botoes centro">
+          <button type="button" class="btn btn-primario" id="btnConfete">🎉 Comemorar a formatura</button>
+          <a href="redacoes.html" class="btn btn-secundario">Ver minhas redações →</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="rodape">
+    <p>Feito com HTML, CSS e JavaScript por Ana Lívia · Programação Web · 2026</p>
+  </footer>
+
+  <button type="button" class="voltar-topo" id="voltarTopo" aria-label="Voltar ao topo">↑</button>
+
+  <!-- Lightbox de fotos -->
+  <div class="lightbox" id="lightbox" hidden>
+    <button type="button" class="modal-fechar" aria-label="Fechar foto">✕</button>
+    <img src="assets/img/perfil.svg" alt="" id="lightboxImg">
+    <p id="lightboxLegenda"></p>
+  </div>
+
+  <canvas id="confete" aria-hidden="true"></canvas>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
